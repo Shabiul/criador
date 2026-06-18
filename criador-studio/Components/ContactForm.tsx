@@ -5,6 +5,8 @@ import { useState } from 'react'
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
@@ -16,18 +18,37 @@ export default function ContactForm() {
     const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value
 
     setLoading(true)
+    setError(false)
+    setErrorMessage('')
+
     try {
-      await fetch('/api/contact', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, phone, message }),
       })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+        setErrorMessage(data.error || 'Something went wrong. Please try again.')
+      }
     } catch (err) {
       console.error(err)
+      setError(true)
+      setErrorMessage('Something went wrong. Please try again.')
     } finally {
       setLoading(false)
-      setSubmitted(true)
     }
+  }
+
+  function resetForm() {
+    setSubmitted(false)
+    setError(false)
+    setErrorMessage('')
   }
 
   return (
@@ -112,10 +133,25 @@ export default function ContactForm() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-black text-[#2E2A26] mb-3">Thank You! 🎉</h3>
-                <p className="text-[#8C857C] text-base leading-relaxed">We've received your message and will connect with you shortly. Thank you for reaching out!</p>
+                <p className="text-[#8C857C] text-base leading-relaxed mb-6">We've received your message and will connect with you shortly. Thank you for reaching out!</p>
+                <button 
+                  onClick={resetForm}
+                  className="px-6 py-2 bg-[#8B31C7] hover:bg-[#7A28B0] text-white rounded-full text-sm font-medium transition-colors"
+                >
+                  Send Another Message
+                </button>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="glass rounded-3xl p-8 space-y-5">
+                {error && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="bg-red-50 border border-red-200 rounded-xl p-4 text-red-700 text-sm"
+                  >
+                    {errorMessage}
+                  </motion.div>
+                )}
                 <div>
                   <label className="block text-xs font-semibold text-[#8C857C] uppercase tracking-wider mb-2">Full Name *</label>
                   <input type="text" name="name" required placeholder="John Smith"

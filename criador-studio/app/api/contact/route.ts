@@ -7,6 +7,25 @@ export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json()
 
+    // Validation
+    const errors: string[] = []
+    
+    if (!name || name.trim().length < 2) {
+      errors.push('Name is required and must be at least 2 characters long')
+    }
+    
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      errors.push('A valid email address is required')
+    }
+    
+    if (!message || message.trim().length < 10) {
+      errors.push('Message is required and must be at least 10 characters long')
+    }
+    
+    if (errors.length > 0) {
+      return NextResponse.json({ error: 'Validation failed', errors }, { status: 400 })
+    }
+
     await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'info@malgudiarts.com',
