@@ -1,8 +1,6 @@
 import { Resend } from 'resend'
 import { NextResponse } from 'next/server'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json()
@@ -26,6 +24,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Validation failed', errors }, { status: 400 })
     }
 
+    // Initialize Resend only when we need to send an email
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    
     await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>',
       to: 'info@malgudiarts.com',
