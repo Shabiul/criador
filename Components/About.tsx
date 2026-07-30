@@ -31,10 +31,10 @@ function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
 }
 
 const stats = [
-  { to: 120, suffix: '+', label: 'Projects Completed' },
-  { to: 50, suffix: '+', label: 'Happy Clients' },
+  { to: 60, suffix: '+', label: 'Projects Completed' },
+  { to: 30, suffix: '+', label: 'Happy Clients' },
   { to: 4, suffix: '+', label: 'Years Experience' },
-  { to: 5, suffix: '★', label: 'Client Rating' },
+  { to: 4.9, suffix: '★', label: 'Client Rating' },
 ]
 
 const values = [
@@ -89,7 +89,7 @@ export default function About() {
               <span className="text-[#8B31C7]">Remember.</span>
             </h2>
             <p className="text-[#8C857C] max-w-sm leading-relaxed border-l-2 border-[#8B31C7]/30 pl-4">
-              A premium creative studio combining strategy, design, and execution for modern brands.
+              A business consulting firm combining execution, strategy, design, and execution for modern brands.
             </p>
           </div>
         </motion.div>
@@ -107,9 +107,7 @@ export default function About() {
             >
               <span itemProp="name" className="sr-only">Criador Creative Studio</span>
               <span itemProp="description">
-              Criador is a premium creative studio based in Bengaluru, India, focused on modern branding, UI/UX design,
-              marketing visuals, and digital experiences that drive real results for
-              forward-thinking brands.
+              Criador is a Business consulting firm based in U.K. focused on modern branding, UI/UX design, marketing visuals, and digital experiences that drive real results for forward-thinking brands.
               </span>
             </motion.p>
 
@@ -172,7 +170,7 @@ export default function About() {
                 </span>
               </div>
               <p className="text-[#8C857C] text-sm leading-relaxed">
-                We combine strategic thinking with bold design — from the first logo sketch to a fully deployed digital experience. Every project built with intention and craft.
+                We combine strategic thinking with bold design - from the first logo sketch to a fully deployed digital experience. Every project built with intention and craft.
               </p>
             </motion.div>
           </div>

@@ -124,32 +124,16 @@ export default function Hero() {
               <TextReveal text="Increasing" delay={0.45} />
             </span>
 
-            {/* Line 4 — Profits. with highlight pill + underline */}
-            <span style={{ display: 'inline-block', position: 'relative', marginTop: '0.1em' }}>
-              <motion.span
-                aria-hidden
-                initial={{ scaleX: 0, opacity: 0 }}
-                animate={{ scaleX: 1, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.0, ease: [0.22, 1, 0.36, 1] }}
-                style={{ originX: 0 }}
-                className="absolute inset-0 -mx-3 rounded-xl bg-[#8B31C7]/10 -z-10"
-              />
+            {/* Line 4 — Profits */}
+            <span style={{ display: 'block' }}>
               <TextReveal
-                text="Profits."
+                text="Profits"
                 delay={0.56}
                 wordClassName="text-[#8B31C7]"
                 onComplete={() => shimmerControls.start({
                   x: ['-100%', '200%'],
                   transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.1 },
                 })}
-              />
-              <motion.span
-                aria-hidden
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.55, delay: 1.15, ease: [0.22, 1, 0.36, 1] }}
-                style={{ originX: 0 }}
-                className="absolute -bottom-1 left-0 right-0 h-[3px] rounded-full bg-gradient-to-r from-[#8B31C7] via-[#C044E0] to-[#8B31C7]"
               />
             </span>
             {/* Shimmer sweep */}
@@ -172,7 +156,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.75 }}
             className="mt-6 md:mt-8 text-[#8C857C] text-base md:text-lg leading-relaxed max-w-md"
           >
-            Business consulting, branding, social media marketing, SEO, and digital experiences crafted for startups and businesses in Bengaluru and across India.
+            Business consulting, branding, social media marketing, SEO, and digital experiences crafted for businesses in U.K. and across the globe.
           </motion.p>
 
           <motion.div
@@ -199,7 +183,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1.2 }}
             className="flex gap-8 md:gap-12 mt-6 md:mt-8 pt-4 md:pt-6 border-t border-[#8C857C]/15"
           >
-            {([{ to: 120, suffix: '+', label: 'Projects' }, { to: 50, suffix: '+', label: 'Clients' }]).map(({ to, suffix, label }, i) => (
+            {([{ to: 60, suffix: '+', label: 'Projects' }, { to: 30, suffix: '+', label: 'Clients' }]).map(({ to, suffix, label }, i) => (
               <motion.div
                 key={label}
                 initial={{ opacity: 0, y: 16 }}
@@ -218,7 +202,7 @@ export default function Hero() {
               <p className="text-2xl md:text-3xl font-black text-[#2E2A26]">
                 4.9<span className="text-lg md:text-xl align-middle">★</span>
               </p>
-              <p className="text-[#8C857C] text-xs md:text-sm mt-1">Rating</p>
+              <p className="text-[#8C857C] text-xs md:text-sm mt-1">Star Rating</p>
             </motion.div>
           </motion.div>
         </div>

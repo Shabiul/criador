@@ -7,15 +7,15 @@ const jsonLd = {
       name: 'Criador Creative Studio',
       alternateName: 'Criador',
       description:
-        'Criador is a premium creative agency in Bengaluru, India, specialising in business consulting, branding, logo design, social media marketing, SEO, AIEO, GEO, catalog design, label designing, visiting card design, web hosting, and e-commerce solutions for startups and modern businesses.',
+        'Criador is a business consulting and creative firm based in the U.K., specialising in business consulting, branding, logo design, social media marketing, SEO, AIEO, GEO, catalog design, label designing, visiting card design, web hosting, and e-commerce solutions for startups and modern businesses.',
       url: 'https://criador-studio.vercel.app',
       telephone: '+919632498185',
-      email: 'hello@criador.studio',
+      email: 'hello@criador.co.uk',
       foundingDate: '2022',
-      priceRange: '₹₹',
-      currenciesAccepted: 'INR',
-      paymentAccepted: 'Credit Card, Bank Transfer, UPI',
-      areaServed: ['India', 'Worldwide'],
+      priceRange: '££',
+      currenciesAccepted: 'GBP',
+      paymentAccepted: 'Credit Card, Bank Transfer',
+      areaServed: ['United Kingdom', 'Worldwide'],
       logo: {
         '@type': 'ImageObject',
         url: 'https://criador-studio.vercel.app/criador_logo.png',
@@ -25,16 +25,7 @@ const jsonLd = {
       image: 'https://criador-studio.vercel.app/criador_logo.png',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Haralur',
-        addressLocality: 'Bengaluru',
-        addressRegion: 'Karnataka',
-        postalCode: '560102',
-        addressCountry: 'IN',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: '12.8905',
-        longitude: '77.6875',
+        addressCountry: 'GB',
       },
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
@@ -67,7 +58,7 @@ const jsonLd = {
       sameAs: [
         'https://www.instagram.com/criador.studio',
         'https://www.facebook.com/criador.studio',
-        'https://www.linkedin.com/company/criador-studio',
+        'https://linkedin.com/criador',
       ],
     },
     {
@@ -75,9 +66,9 @@ const jsonLd = {
       '@id': 'https://criador-studio.vercel.app/#website',
       url: 'https://criador-studio.vercel.app',
       name: 'Criador Creative Studio',
-      description: 'Premium creative agency in Bengaluru for branding, social media, SEO, and web design.',
+      description: 'Premium business consulting and creative agency in U.K. for branding, social media, SEO, and web design.',
       publisher: { '@id': 'https://criador-studio.vercel.app/#business' },
-      inLanguage: 'en-IN',
+      inLanguage: 'en-GB',
       potentialAction: {
         '@type': 'SearchAction',
         target: {
@@ -91,10 +82,10 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': 'https://criador-studio.vercel.app/#webpage',
       url: 'https://criador-studio.vercel.app',
-      name: 'Criador Creative Studio | Branding, Social Media & Web Design Agency in Bengaluru',
+      name: 'Criador Creative Studio | Business Consulting, Branding & Web Design Agency in U.K.',
       isPartOf: { '@id': 'https://criador-studio.vercel.app/#website' },
       about: { '@id': 'https://criador-studio.vercel.app/#business' },
-      description: 'Home page of Criador Creative Studio — premium branding, digital marketing, SEO, and web design agency based in Bengaluru, India.',
+      description: 'Home page of Criador Creative Studio - business consulting, branding, digital marketing, SEO, and web design firm based in United Kingdom.',
       breadcrumb: {
         '@type': 'BreadcrumbList',
         itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://criador-studio.vercel.app' }],
@@ -106,17 +97,17 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'What services does Criador offer?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Criador offers branding, catalog design, visiting cards, label designing, social media marketing, SEO, AIEO, GEO, web hosting, e-commerce development, and business consulting — everything a modern business needs to build a strong brand presence and grow online.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Criador offers branding, catalog design, visiting cards, label designing, social media marketing, SEO, AIEO, GEO, web hosting, e-commerce development, and business consulting - everything a modern business needs to build a strong brand presence and grow online.' },
         },
         {
           '@type': 'Question',
           name: 'Where is Criador Creative Studio located?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Criador Creative Studio is based in Haralur, Bengaluru, Karnataka, India. We serve clients across India and internationally.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Criador Creative Studio is based in the United Kingdom. We serve clients across the U.K. and internationally.' },
         },
         {
           '@type': 'Question',
           name: 'How long does a branding project take?',
-          acceptedAnswer: { '@type': 'Answer', text: 'A standard branding project at Criador takes 2–4 weeks from discovery to final delivery, depending on project scope and revision cycles. Larger projects like full digital experiences may take 6–8 weeks.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'A standard branding project at Criador takes 2-4 weeks from discovery to final delivery, depending on project scope and revision cycles. Larger projects like full digital experiences may take 6-8 weeks.' },
         },
         {
           '@type': 'Question',
@@ -126,7 +117,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'Do you work with startups and small businesses?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Criador works with businesses of all sizes — from early-stage startups building their first brand identity to established companies refreshing their presence for a new market.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. Criador works with businesses of all sizes - from early-stage startups building their first brand identity to established companies refreshing their presence for a new market.' },
         },
         {
           '@type': 'Question',

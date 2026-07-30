@@ -44,7 +44,7 @@ const steps = [
   {
     num: '04',
     title: 'Design',
-    desc: 'Crafting every visual asset with precision — from logos to full digital systems.',
+    desc: 'Crafting every visual asset with precision - from logos to full digital systems.',
     bg: 'bg-[#7B4F12]',
     iconBg: 'bg-[#7B4F12]',
     icon: (
@@ -153,7 +153,7 @@ export default function Process() {
         >
           <div className="flex items-center gap-4">
             <span className="text-2xl">⏱️</span>
-            <p className="text-[#2E2A26] font-semibold">Average turnaround: <span className="text-[#8B31C7]">7–14 days</span> from brief to delivery</p>
+            <p className="text-[#2E2A26] font-semibold">Average turnaround: <span className="text-[#8B31C7]">4-14 days</span> from brief to delivery</p>
           </div>
           <a href="#contact" className="inline-block px-7 py-3.5 bg-[#8B31C7] text-white rounded-full text-sm font-semibold hover:bg-[#7A28B0] transition-all duration-200 hover:scale-105 active:scale-95 whitespace-nowrap shadow-lg shadow-[#8B31C7]/20">
             Start Your Project →

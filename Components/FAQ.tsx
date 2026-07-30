@@ -5,23 +5,23 @@ import { useState } from 'react'
 const faqs = [
   {
     q: 'What services does Criador offer?',
-    a: 'Criador offers business consulting, branding, catalog design, visiting cards, label designing, social media marketing, SEO, AIEO, GEO, web hosting, and e-commerce development — everything a modern business needs to build a strong brand presence and grow online.',
+    a: 'Criador offers business consulting, branding, catalog design, visiting cards, label designing, social media marketing, SEO, AIEO, GEO, web hosting, and e-commerce development - everything a modern business needs to build a strong brand presence and grow online.',
   },
   {
     q: 'Where is Criador Creative Studio located?',
-    a: 'Criador Creative Studio is based in Haralur, Bengaluru, Karnataka, India. We serve clients across India and internationally via remote collaboration.',
+    a: 'Criador Creative Studio is based in the United Kingdom. We serve clients across the U.K. and internationally via remote collaboration.',
   },
   {
     q: 'How long does a branding project take?',
-    a: 'A standard branding project takes 2–4 weeks from discovery to final delivery, depending on project scope and revision cycles. Larger projects like full digital experiences may take 6–8 weeks.',
+    a: 'A standard branding project takes 2-4 weeks from discovery to final delivery, depending on project scope and revision cycles. Larger projects like full digital experiences may take 6-8 weeks.',
   },
   {
     q: 'What is your pricing structure?',
-    a: 'Our pricing is project-based. We provide a detailed quote after an initial strategy call to understand your specific needs, goals, and timeline. No hidden fees — ever.',
+    a: 'Our pricing is project-based. We provide a detailed quote after an initial strategy call to understand your specific needs, goals, and timeline. No hidden fees - ever.',
   },
   {
     q: 'Do you work with startups and small businesses?',
-    a: 'Absolutely. We work with businesses of all sizes — from early-stage startups building their first brand identity to established companies looking to refresh their presence for a new market.',
+    a: 'Absolutely. We work with businesses of all sizes - from early-stage startups building their first brand identity to established companies looking to refresh their presence for a new market.',
   },
   {
     q: 'How does the design process work?',
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: 'Does Criador offer SEO, AIEO, and GEO services?',
-    a: 'Yes. We provide traditional SEO (Search Engine Optimization), AIEO (AI Engine Optimization for tools like ChatGPT and Gemini), and GEO (Generative Engine Optimization for AI-generated search results) — ensuring your brand is discoverable across all modern search surfaces.',
+    a: 'Yes. We provide traditional SEO (Search Engine Optimization), AIEO (AI Engine Optimization for tools like ChatGPT and Gemini), and GEO (Generative Engine Optimization for AI-generated search results) - ensuring your brand is discoverable across all modern search surfaces.',
   },
   {
     q: 'How can I contact Criador Creative Studio?',
@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     q: 'Can Criador handle both design and digital marketing for my brand?',
-    a: 'Yes — that\'s exactly what sets us apart. We offer end-to-end brand building under one roof: from logo design and brand identity to social media marketing, SEO, and e-commerce. You get a consistent brand voice and look across every touchpoint without juggling multiple agencies.',
+    a: 'Yes - that\'s exactly what sets us apart. We offer end-to-end brand building under one roof: from logo design and brand identity to social media marketing, SEO, and e-commerce. You get a consistent brand voice and look across every touchpoint without juggling multiple agencies.',
   },
 ]
 

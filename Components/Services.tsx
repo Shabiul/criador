@@ -242,7 +242,7 @@ const services: {
 }[] = [
   {
     title: 'Business Consulting',
-    desc: 'We analyse your business, identify growth gaps, and build a clear roadmap — from positioning and pricing strategy to operational efficiency and revenue scaling.',
+    desc: 'We analyse your business, identify growth gaps, and build a clear roadmap - from positioning and pricing strategy to operational efficiency and revenue scaling.',
     gradient: 'from-[#1B3A4B] to-[#0D2233]',
     image: bp('/services/business-consultancy.jpeg'),
     iconBg: 'bg-white/15',
@@ -281,7 +281,7 @@ const services: {
   },
   {
     title: 'Visiting Cards',
-    desc: 'Premium business card designs — front & back — that leave a lasting impression at every handshake and networking event.',
+    desc: 'Premium business card designs - front & back - that leave a lasting impression at every handshake in networking event.',
     gradient: 'from-[#3D2B1F] to-[#5C3D2E]',
     image: bp('/visiting-card.jpeg'),
     iconBg: 'bg-white/15',
@@ -335,7 +335,7 @@ const services: {
   },
   {
     title: 'Web Hosting',
-    desc: 'Fast, secure, and reliable hosting with uptime guarantee — corporate, real estate, resort, and e-commerce sites.',
+    desc: 'Fast, secure, and reliable hosting with uptime guarantee - corporate, real estate, resort, and e-commerce sites.',
     gradient: 'from-[#1C3A5E] to-[#2A5298]',
     image: bp('/web-hosting.jpeg'),
     iconBg: 'bg-white/15',
@@ -352,7 +352,7 @@ const services: {
   },
   {
     title: 'E-Commerce',
-    desc: 'End-to-end online store design and development built to convert visitors into customers with a full shopping experience.',
+    desc: 'End-to-end online store design and development built to convert visitors into customers with an end to end shopping experience.',
     gradient: 'from-[#4A1942] to-[#7B2D73]',
     image: bp('/services/ecom.jpg'),
     iconBg: 'bg-white/15',

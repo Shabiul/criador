@@ -5,6 +5,21 @@ import Link from 'next/link'
 import Navbar from '@/Components/Navbar'
 import Footer from '@/Components/Footer'
 import { getAllPosts, BlogPost } from '@/lib/wordpress'
+import { bp } from '@/lib/bp'
+
+function getCustomCoverImage(title: string, slug: string, category: string): string {
+  const t = ((title || '') + ' ' + (slug || '') + ' ' + (category || '')).toLowerCase()
+  if (t.includes('logo') || t.includes('brand needs') || (slug && slug.includes('logo'))) {
+    return bp('/logo-brand.png')
+  }
+  if (t.includes('growth') || t.includes('business growth') || t.includes('branding drives')) {
+    return bp('/branmd-growth.png')
+  }
+  if (t.includes('seo') || t.includes('ai engine') || t.includes('aieo')) {
+    return bp('/seo&aieo.png')
+  }
+  return bp('/logo-brand.png')
+}
 
 function readingTime(content: string) {
   const words = content.replace(/<[^>]*>/g, '').split(/\s+/).length
@@ -85,15 +100,11 @@ export default function BlogsPage() {
                   <Link href={`/blogs/${featured.slug}`} className="group block">
                     <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 grid md:grid-cols-2 min-h-[420px]">
                       <div className="overflow-hidden bg-[#8B31C7]/10 relative">
-                        {featured.coverImage ? (
-                          <img src={featured.coverImage} alt={featured.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0"
-                          />
-                        ) : (
-                          <div className="w-full h-full min-h-[280px] flex items-center justify-center bg-gradient-to-br from-[#8B31C7]/20 via-[#C044E0]/10 to-[#8B31C7]/5">
-                            <span className="text-[#8B31C7]/30 text-9xl font-black">C</span>
-                          </div>
-                        )}
+                        <img
+                          src={featured.coverImage || getCustomCoverImage(featured.title, featured.slug, featured.category)}
+                          alt={featured.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 absolute inset-0"
+                        />
                         <div className="absolute top-4 left-4">
                           <span className="bg-[#8B31C7] text-white text-[10px] uppercase tracking-[2px] font-bold px-3 py-1.5 rounded-full">
                             Featured
@@ -148,15 +159,11 @@ export default function BlogsPage() {
                         <Link href={`/blogs/${post.slug}`} className="group block h-full">
                           <article className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
                             <div className="aspect-[16/9] overflow-hidden bg-[#8B31C7]/10 relative">
-                              {post.coverImage ? (
-                                <img src={post.coverImage} alt={post.title}
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                />
-                              ) : (
-                                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#8B31C7]/20 to-[#C044E0]/10">
-                                  <span className="text-[#8B31C7]/40 text-5xl font-black">C</span>
-                                </div>
-                              )}
+                              <img
+                                src={post.coverImage || getCustomCoverImage(post.title, post.slug, post.category)}
+                                alt={post.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                              />
                             </div>
                             <div className="p-6 flex flex-col flex-1">
                               {post.category && (

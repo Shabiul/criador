@@ -7,7 +7,7 @@ function CountUp({ to, suffix = '' }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null)
   const inView = useInView(ref, { once: true })
   const count = useMotionValue(0)
-  const rounded = useTransform(count, (v) => `${Math.round(v)}${suffix}`)
+  const rounded = useTransform(count, (v) => Number.isInteger(to) ? `${Math.round(v)}${suffix}` : `${v.toFixed(1)}${suffix}`)
   useEffect(() => {
     if (inView) animate(count, to, { duration: 2, ease: 'easeOut' })
   }, [inView, count, to])
@@ -70,9 +70,9 @@ export default function CTA() {
             className="flex items-center justify-center gap-6 mb-10"
           >
             {[
-              { to: 120, suffix: '+', label: 'Projects' },
-              { to: 50, suffix: '+', label: 'Happy Clients' },
-              { to: 5, suffix: '★', label: 'Average Rating' },
+              { to: 60, suffix: '+', label: 'Projects' },
+              { to: 30, suffix: '+', label: 'Happy Clients' },
+              { to: 4.9, suffix: '★', label: 'Average Rating' },
             ].map(({ to, suffix, label }) => (
               <div key={label} className="text-center">
                 <p className="text-2xl font-black text-white"><CountUp to={to} suffix={suffix} /></p>

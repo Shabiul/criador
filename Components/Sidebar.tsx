@@ -21,7 +21,7 @@ export default function Sidebar() {
         <div className="w-px h-16 bg-[#8C857C]/30" />
 
         <a
-          href="https://linkedin.com"
+          href="https://linkedin.com/criador"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"

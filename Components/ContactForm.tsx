@@ -80,13 +80,13 @@ export default function ContactForm() {
 
             {/* Sub-copy */}
             <p className="text-[#8C857C] text-lg leading-relaxed mb-10 max-w-sm">
-              Tell us about your business — we'll get back within <span className="font-semibold text-[#2E2A26]">24 hours</span> with a tailored growth plan.
+              Tell us about your business - we'll get back within <span className="font-semibold text-[#2E2A26]">24 hours</span> with a tailored growth plan.
             </p>
 
             <div className="space-y-6">
               {[
                 {
-                  label: 'Email Us', value: 'hello@criador.studio', href: 'mailto:hello@criador.studio',
+                  label: 'Email Us', value: 'hello@criador.co.uk', href: 'mailto:hello@criador.co.uk',
                   icon: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>,
                 },
                 {
@@ -94,7 +94,7 @@ export default function ContactForm() {
                   icon: <><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></>,
                 },
                 {
-                  label: 'LinkedIn', value: 'linkedin.com/company/criador', href: 'https://www.linkedin.com/company/criador',
+                  label: 'LinkedIn', value: 'linkedin.com/criador', href: 'https://linkedin.com/criador',
                   icon: <><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></>,
                 },
               ].map(({ label, value, href, icon }) => (

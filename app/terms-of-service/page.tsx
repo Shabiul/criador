@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Terms of Service — Criador Studio',
+  title: 'Terms of Service - Criador Studio',
   description: 'Terms governing the use of Criador Studio services and website.',
 }
 
@@ -56,7 +56,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-semibold text-[#2E2A26] mb-3">4. Intellectual Property Rights</h2>
-            <p>All content published on this website — including but not limited to graphics, branding elements, design assets, written copy, visual layouts, and proprietary methodologies — is the exclusive intellectual property of Criador Studio and is protected under applicable intellectual property laws.</p>
+            <p>All content published on this website - including but not limited to graphics, branding elements, design assets, written copy, visual layouts, and proprietary methodologies - is the exclusive intellectual property of Criador Studio and is protected under applicable intellectual property laws.</p>
             <p className="mt-3">The following terms govern intellectual property in client engagements:</p>
             <ul className="list-disc pl-5 mt-2 space-y-1">
               <li>Unauthorised reproduction, distribution, modification, or commercial exploitation of any content from this website is strictly prohibited.</li>
@@ -133,7 +133,7 @@ export default function TermsOfService() {
 
           <section>
             <h2 className="text-xl font-semibold text-[#2E2A26] mb-3">12. Governing Law &amp; Dispute Resolution</h2>
-            <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising out of or in connection with these Terms or any engagement with Criador Studio shall be subject to the exclusive jurisdiction of the courts located in Bengaluru, Karnataka.</p>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the United Kingdom.</p>
           </section>
 
           <section>
@@ -141,8 +141,8 @@ export default function TermsOfService() {
             <p>For enquiries related to these Terms, please contact us at:</p>
             <div className="mt-3 space-y-1">
               <p className="font-semibold text-[#2E2A26]">Criador Studio</p>
-              <p>Haralur, Bengaluru</p>
-              <p>Email: <a href="mailto:hello@criadorstudio.com" className="text-[#8B31C7] hover:underline">hello@criadorstudio.com</a></p>
+              <p>United Kingdom</p>
+              <p>Email: <a href="mailto:hello@criador.co.uk" className="text-[#8B31C7] hover:underline">hello@criador.co.uk</a></p>
               <p>Phone: <a href="tel:+919632498185" className="text-[#8B31C7] hover:underline">+91 96324 98185</a></p>
               <p>Website: <a href="https://criador-studio.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[#8B31C7] hover:underline">criador-studio.vercel.app</a></p>
             </div>

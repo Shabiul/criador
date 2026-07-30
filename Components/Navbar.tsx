@@ -53,7 +53,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 md:px-6 flex items-center justify-between h-20" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
           {/* Logo */}
-          <a href="/" aria-label="Criador Creative Studio — Home" className="shrink-0">
+          <a href="/" aria-label="Criador Creative Studio - Home" className="shrink-0">
             <img src={bp('/criador_logo.png')} alt="Criador Creative Studio" className="h-10 w-auto" style={{ mixBlendMode: 'normal' }} />
           </a>
 

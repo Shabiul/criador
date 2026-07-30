@@ -3,14 +3,16 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BlogPost } from '@/lib/wordpress'
 
+import { bp } from '@/lib/bp'
+
 const placeholders: BlogPost[] = [
   {
     id: -1,
     title: 'How Great Branding Drives 3× Business Growth',
     slug: '#',
-    excerpt: 'A strong brand identity is not just aesthetics — it is the foundation of trust, recall, and revenue. Discover how strategic branding transforms businesses.',
+    excerpt: 'A strong brand identity is not just aesthetics - it is the foundation of trust, recall, and revenue. Discover how strategic branding transforms businesses.',
     content: '',
-    coverImage: null,
+    coverImage: bp('/branmd-growth.png'),
     category: 'Branding',
     publishedAt: '2026-06-10T00:00:00',
   },
@@ -20,17 +22,17 @@ const placeholders: BlogPost[] = [
     slug: '#',
     excerpt: 'Traditional SEO is no longer enough. With AI search tools like ChatGPT and Gemini reshaping discovery, your brand needs AIEO and GEO strategies to stay visible.',
     content: '',
-    coverImage: null,
+    coverImage: bp('/seo&aieo.png'),
     category: 'SEO & AIEO',
     publishedAt: '2026-05-28T00:00:00',
   },
   {
     id: -3,
-    title: '5 Social Media Mistakes Killing Your Brand (And How to Fix Them)',
+    title: 'Why Your Brand Needs More Than Just a Logo',
     slug: '#',
-    excerpt: 'Most brands post consistently but still see no growth. The issue is not frequency — it is strategy. Here are the top mistakes and how Criador helps fix them.',
+    excerpt: 'Most brands post consistently but still see no growth. The issue is not frequency - it is strategy. Here are the top mistakes and how Criador helps fix them.',
     content: '',
-    coverImage: null,
+    coverImage: bp('/logo-brand.png'),
     category: 'Social Media',
     publishedAt: '2026-05-15T00:00:00',
   },
@@ -42,35 +44,21 @@ const categoryColors: Record<string, string> = {
   'Social Media': 'text-blue-600',
 }
 
-function PlaceholderCover({ category }: { category: string }) {
-  const gradients: Record<string, string> = {
-    Branding: 'from-[#8B31C7]/30 to-[#6B2490]/10',
-    'SEO & AIEO': 'from-emerald-500/20 to-teal-600/10',
-    'Social Media': 'from-blue-500/20 to-indigo-600/10',
-  }
-  const icons: Record<string, React.ReactNode> = {
-    Branding: (
-      <svg className="w-10 h-10 text-[#8B31C7]/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2l9.5 5.5v11L12 24l-9.5-5.5v-11z"/>
-      </svg>
-    ),
-    'SEO & AIEO': (
-      <svg className="w-10 h-10 text-emerald-500/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-      </svg>
-    ),
-    'Social Media': (
-      <svg className="w-10 h-10 text-blue-500/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
-        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-      </svg>
-    ),
+function PlaceholderCover({ category, title }: { category: string; title?: string }) {
+  const t = ((title || '') + ' ' + (category || '')).toLowerCase()
+  let imgSrc = bp('/logo-brand.png')
+  if (t.includes('growth') || t.includes('branding drives')) {
+    imgSrc = bp('/branmd-growth.png')
+  } else if (t.includes('seo') || t.includes('ai engine') || t.includes('aieo')) {
+    imgSrc = bp('/seo&aieo.png')
   }
 
   return (
-    <div className={`w-full h-full bg-gradient-to-br ${gradients[category] ?? 'from-[#8B31C7]/20 to-transparent'} flex items-center justify-center`}>
-      {icons[category] ?? <span className="text-[#8B31C7]/40 text-5xl font-black">C</span>}
-    </div>
+    <img
+      src={imgSrc}
+      alt={title || category || 'Blog Cover'}
+      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+    />
   )
 }
 
@@ -127,7 +115,7 @@ export default function Blogs({ posts }: { posts: BlogPost[] }) {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       ) : (
-                        <PlaceholderCover category={post.category} />
+                        <PlaceholderCover category={post.category} title={post.title} />
                       )}
                     </div>
                     <div className="p-6 flex flex-col flex-1">

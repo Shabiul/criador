@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: 'https://criador-studio.vercel.app',
     siteName: 'Criador Creative Studio',
     title: 'Criador Creative Studio | Branding, Social Media & Web Design Agency',
-    description: 'Premium creative agency for branding, social media, SEO, packaging, and web design. 120+ projects. 50+ happy clients.',
+    description: 'Premium creative agency for branding, social media, SEO, packaging, and web design. 60+ projects. 30+ happy clients.',
     images: [{ url: '/criador_logo.png', width: 1200, height: 630, alt: 'Criador Creative Studio' }],
   },
   twitter: {

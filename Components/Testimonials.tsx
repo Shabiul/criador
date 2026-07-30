@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 const reviews = [
   {
-    quote: "Before Criador, we were invisible. Six months later, clients recognize us everywhere. That's not design — that's witchcraft.",
+    quote: "Before Criador, we were invisible. Six months later, clients recognize us everywhere. That's not design - that's witchcraft.",
     name: 'Arjun Mehta',
     role: 'Founder, Zinox Kitchen',
     initials: 'AM',
@@ -18,7 +18,7 @@ const reviews = [
     gradient: 'from-[#2E4057] to-[#4A6FA5]',
   },
   {
-    quote: "I showed our new branding to an investor. He said — 'This looks like a million-dollar company.' We hadn't even launched yet.",
+    quote: "I showed our new branding to an investor. He said - 'This looks like a million-dollar company.' We hadn't even launched yet.",
     name: 'Rahul Verma',
     role: 'Co-Founder, Verifyer',
     initials: 'RV',
